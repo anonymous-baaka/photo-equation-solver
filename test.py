@@ -119,5 +119,21 @@ for i in range(len(train_data)):
         s = s + '8'
     if (result[0] == 9):
         s = s + '9'
+    if (result[0] == 13):
+        s = s + '/'
+    if (result[0] == 14):
+        s = s + '('
+    if (result[0] == 15):
+        s = s + ')'
+    if (result[0] == 16):
+        s = s + 'sqrt'
+    if (result[0] == 17):
+        s = s + 'x'
+    if (result[0] == 18):
+        s = s + 'y'
+    if (result[0] == 19):
+        s = s + 'z'
+    if (result[0] == 20):
+        s = s + '='
 
 print(s)
