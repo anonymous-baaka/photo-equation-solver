@@ -134,6 +134,63 @@ for i in range(0,len(data12)):
 data=np.concatenate((data,data12))
 print(len(data))
 
+#assign / = 13
+data13 = load_images_from_folder(path+'div')
+for i in range(0, len(data13)):
+    data13[i] = np.append(data13[i], ['13'])
+data=np.concatenate((data,data13))
+print(len(data))
+
+#assign ( = 14
+data14 = load_images_from_folder(path+'(')
+for i in range(0, len(data14)):
+    data14[i] = np.append(data14[i], ['14'])
+data=np.concatenate((data,data14))
+print(len(data))
+
+#assign ) = 15
+data15 = load_images_from_folder(path+')')
+for i in range(0, len(data15)):
+    data15[i] = np.append(data15[i], ['15'])
+data=np.concatenate((data,data15))
+print(len(data))
+
+#assign sqrt= 16
+data16 = load_images_from_folder(path+'sqrt')
+for i in range(0, len(data16)):
+    data16[i] = np.append(data16[i], ['16'])
+data=np.concatenate((data,data16))
+print(len(data))
+
+#assign x=17
+data17 = load_images_from_folder(path+'times')
+for i in range(0, len(data17)):
+    data17[i] = np.append(data17[i], ['17'])
+data=np.concatenate((data,data17))
+print(len(data))
+
+#y=18
+data18 = load_images_from_folder(path+'y')
+for i in range(0, len(data18)):
+    data18[i] = np.append(data18[i], ['18'])
+data=np.concatenate((data,data18))
+print(len(data))
+
+#z=19
+data19 = load_images_from_folder(path+'z')
+for i in range(0, len(data19)):
+    data19[i] = np.append(data19[i], ['19'])
+data=np.concatenate((data,data19))
+print(len(data))
+
+#= = 20
+data20 = load_images_from_folder(path+'=')
+for i in range(0, len(data20)):
+    data20[i] = np.append(data20[i], ['20'])
+data=np.concatenate((data,data20))
+print(len(data))
+
+
 df=pd.DataFrame(data,index=None)
 df.to_csv('train_final.csv',index=False)
 fp=open("length.txt",'w')
