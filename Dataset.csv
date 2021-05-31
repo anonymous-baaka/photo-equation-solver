@@ -1,0 +1,15 @@
+Buying_price,Maintenance_price,Lug_boot,Safety,Evaluation
+High,High,Small,High,Unacceptable
+High,High,Small,Low,Unacceptable
+Medium,High,Small,High,Acceptable
+Low,Medium,Small,High,Acceptable
+Low,Low,Big,High,Acceptable
+Low,Low,Big,Low,Unacceptable
+Medium,Low,Big,Low,Acceptable
+High,Medium,Small,High,Unacceptable
+High,Low,Big,High,Acceptable
+Low,Medium,Big,High,Acceptable
+High,Medium,Big,Low,Acceptable
+Medium,Medium,Small,Low,Acceptable
+Medium,High,Big,High,Acceptable
+Low,Medium,Small,Low,Unacceptable

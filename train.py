@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 import pickle
@@ -28,14 +27,14 @@ K.image_data_format()
 labels=np.array(labels)
 
 from keras.utils.np_utils import to_categorical
-cat=to_categorical(labels,num_classes=13)
+cat=to_categorical(labels,num_classes=21)
 
 print(cat[0])
 
 df_train.head()
 
 l=[]
-for i in range(156617):
+for i in range(226607):
     l.append(np.array(df_train[i:i+1]).reshape(1,28,28))
 
 np.random.seed(7)
@@ -48,7 +47,7 @@ model.add(Dropout(0.2))
 model.add(Flatten())
 model.add(Dense(128, activation='relu'))
 model.add(Dense(50, activation='relu'))
-model.add(Dense(13, activation='softmax'))
+model.add(Dense(21, activation='softmax'))
 # Compile model
 model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
@@ -56,7 +55,7 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 from keras.models import model_from_json
 
 
-model.fit(np.array(l), cat, epochs=10, batch_size=200,shuffle=True,verbose=1)
+model.fit(np.array(l), cat, epochs=150, batch_size=200,shuffle=True,verbose=1)
 
 model_json = model.to_json()
 with open("model_final.json", "w") as json_file:
